@@ -8,10 +8,12 @@ import { IoIosMail } from "react-icons/io";
 const Footer = () => {
 	return (
 		<div className="w-full bg-teal-400 flex flex-col py-8 px-5 md:px-12">
-			<div className="flex gap-2 items-center">
+			<Link
+				to={"/"}
+				className="flex gap-2 items-center">
 				<GiTwoCoins className="text-6xl text-white" />
 				<h1 className="text-3xl text-white font-bold">Crypto Simulator</h1>
-			</div>
+			</Link>
 			<h2 className="text-white font-semibold text-xl">A place you can practice trading coins risk free!</h2>
 			<div className="w-full bg-white h-[2px] my-4"></div>
 			{/* 3 COLS */}
