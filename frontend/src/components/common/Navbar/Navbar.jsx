@@ -11,7 +11,7 @@ const Navbar = ({ user }) => {
 		setOpen(!open);
 	};
 	return (
-		<div className="bg-teal-400 w-full z-50">
+		<div className="bg-teal-400 w-full z-50 shadow-2xl">
 			{/* Container */}
 			<div className="flex items-center justify-between w-[95%] mx-auto py-3 z-10">
 				<MenuIcon
