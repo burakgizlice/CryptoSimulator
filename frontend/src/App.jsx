@@ -1,15 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React, { useState } from "react";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/common/Navbar/Navbar";
 import Footer from "./components/common/Footer/Footer";
 import { Landing, Redirecting, UserAssets, UserProfitLoss, UserSettings, UserTransactions, Coins } from "./components/pages/Pages";
+import UserSignIn from "./components/pages/UserSignIn/UserSignIn";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-	<React.StrictMode>
+const App = () => {
+	// ========== MOCK AUTH LOGIC
+	const [user, setUser] = useState(null);
+	return (
 		<BrowserRouter>
-			<Navbar />
+			<Navbar user={user} />
 			<Routes>
 				<Route
 					path="/"
@@ -39,8 +41,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 					path="/my-transaction-history"
 					element={<UserTransactions />}
 				/>
+				<Route
+					path="/user-sign-in"
+					element={<UserSignIn setUser={(a) => setUser(a)} />}
+				/>
 			</Routes>
 			<Footer />
 		</BrowserRouter>
-	</React.StrictMode>
-);
+	);
+};
+
+export default App;

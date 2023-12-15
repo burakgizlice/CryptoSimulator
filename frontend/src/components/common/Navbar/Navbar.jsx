@@ -3,8 +3,9 @@ import Brand from "./components/Brand";
 import Links from "./components/Links";
 import Profile from "./components/Profile";
 import MenuIcon from "./components/MenuIcon";
+import SignInButton from "./components/SignInButton";
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
 	const [open, setOpen] = useState(false);
 	const trigger = () => {
 		setOpen(!open);
@@ -22,7 +23,7 @@ const Navbar = () => {
 					open={open}
 					close={() => setOpen(false)}
 				/>
-				<Profile />
+				{user ? <Profile /> : <SignInButton />}
 			</div>
 		</div>
 	);
