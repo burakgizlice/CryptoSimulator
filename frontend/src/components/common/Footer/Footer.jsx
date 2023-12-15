@@ -10,7 +10,7 @@ const Footer = () => {
 		<div className="w-full bg-teal-400 flex flex-col py-8 px-5 md:px-12">
 			<Link
 				to={"/"}
-				className="flex gap-2 items-center">
+				className="flex gap-2 items-center w-fit">
 				<GiTwoCoins className="text-6xl text-white" />
 				<h1 className="text-3xl text-white font-bold">Crypto Simulator</h1>
 			</Link>
