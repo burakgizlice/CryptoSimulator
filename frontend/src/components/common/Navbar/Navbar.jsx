@@ -18,7 +18,10 @@ const Navbar = () => {
 					trigger={trigger}
 				/>
 				<Brand />
-				<Links open={open} />
+				<Links
+					open={open}
+					close={() => setOpen(false)}
+				/>
 				<Profile />
 			</div>
 		</div>
