@@ -5,7 +5,7 @@ import Register from "./components/Register";
 const UserSignIn = ({ setUser }) => {
 	const [logIn, setLogIn] = useState(true);
 	return (
-		<div className="bg-teal-100 min-h-[75vh] flex items-center justify-center">
+		<div className="bg-purple-100 min-h-[75vh] flex items-center justify-center">
 			{logIn ? (
 				<LogIn
 					setUser={setUser}

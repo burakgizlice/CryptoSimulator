@@ -18,7 +18,7 @@ const Hero = () => {
 					Immerse Yourself in the World of Crypto Trading<span className="block text-xl mt-4">Welcome to the Crypto Simulator, a risk-free environment where you can hone your trading skills and explore the exciting dynamics of the cryptocurrency market!</span>
 				</h2>
 			</div>
-			<button className="md:text-5xl text-3xl font-bold bg-teal-500 md:py-4 py-2 md:px-8 px-4 rounded-3xl shadow-md text-white border-[2px] border-white cursor-pointer transition-all hover:bg-teal-400 hover:scale-110">Start Now!</button>
+			<button className="md:text-5xl text-3xl font-bold bg-purple-500 md:py-4 py-2 md:px-8 px-4 rounded-3xl shadow-md text-white border-[2px] border-white cursor-pointer transition-all hover:bg-purple-400 hover:scale-110">Start Now!</button>
 		</div>
 	);
 };

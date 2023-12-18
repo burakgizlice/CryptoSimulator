@@ -7,7 +7,7 @@ import { IoIosMail } from "react-icons/io";
 
 const Footer = () => {
 	return (
-		<div className="w-full bg-teal-400 flex flex-col py-8 px-5 md:px-12">
+		<div className="w-full bg-purple-400 flex flex-col py-8 px-5 md:px-12">
 			<Link
 				to={"/"}
 				className="flex gap-2 items-center w-fit">
@@ -23,6 +23,7 @@ const Footer = () => {
 					<ul className="flex flex-col py-3 text-white text-lg">
 						{pages.map((item, index) => (
 							<Link
+								key={index}
 								className="transition-all hover:scale-105"
 								to={item.path}>
 								{item.name}
