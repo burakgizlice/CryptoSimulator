@@ -63,7 +63,7 @@ const CoinTable = () => {
 							<th
 								key={index}
 								onClick={() => handleSortClick(item.content)}
-								className={`p-3 text-sm font-semibold tracking-wide text-left group`}
+								className={`p-3 text-sm font-semibold tracking-wide text-left group cursor-pointer`}
 								style={{ width: item.width + "px", minWidth: item.width + "px" }}>
 								<div className="flex items-center">
 									<span>{item.content}</span>
