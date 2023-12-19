@@ -97,7 +97,10 @@ const CoinPage = () => {
 				</ul>
 			</div>
 			{/* Buy And Sell */}
-			<BuySell />
+			<BuySell
+				active={active}
+				coin={coin}
+			/>
 		</div>
 	);
 };
