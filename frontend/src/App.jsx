@@ -5,6 +5,7 @@ import Navbar from "./components/common/Navbar/Navbar";
 import Footer from "./components/common/Footer/Footer";
 import { Landing, Redirecting, UserAssets, UserProfitLoss, UserSettings, UserTransactions, Coins } from "./components/pages/Pages";
 import UserSignIn from "./components/pages/UserSignIn/UserSignIn";
+import CoinPage from "./components/pages/CoinPage/CoinPage";
 
 const App = () => {
 	// ========== MOCK AUTH LOGIC
@@ -20,6 +21,10 @@ const App = () => {
 				<Route
 					path="/coin-list"
 					element={<Coins />}
+				/>
+				<Route
+					path="/coin/:id"
+					element={<CoinPage />}
 				/>
 				<Route
 					path="*"

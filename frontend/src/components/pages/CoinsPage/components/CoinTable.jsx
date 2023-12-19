@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import coins from "../../../util/mockCoinData.js";
 import { FaCaretDown, FaCaretUp, FaRegStar, FaStar } from "react-icons/fa";
 import { Sparklines, SparklinesLine } from "react-sparklines";
+import { useNavigate } from "react-router-dom";
 
 const CoinTable = () => {
+	const nav = useNavigate();
 	const [orderBy, setOrderBy] = useState("#1");
 	const [starred, setStarred] = useState({});
 
@@ -100,7 +102,9 @@ const CoinTable = () => {
 									<span>{index + 1}</span>
 								</div>
 							</td>
-							<td className="py-6">
+							<td
+								onClick={() => nav(`/coin/${coin.symbol}`)}
+								className="py-6">
 								<div className="flex items-center gap-4">
 									<img
 										className="aspect-square w-[30px]"
@@ -108,13 +112,39 @@ const CoinTable = () => {
 									{coin.name} <span className="text-gray-400">{coin.symbol.toUpperCase()}</span>
 								</div>
 							</td>
-							<td className={`py-6`}>{coin.current_price.toLocaleString()} $</td>
-							<td className={`py-6 ${coin.price_change_percentage_1h_in_currency > 0 ? "text-green-400" : "text-red-500"}`}>{coin.price_change_percentage_1h_in_currency.toFixed(2)}%</td>
-							<td className={`py-6 ${coin.price_change_percentage_24h_in_currency > 0 ? "text-green-400" : "text-red-500"}`}>{coin.price_change_percentage_24h_in_currency.toFixed(2)}%</td>
-							<td className={`py-6 ${coin.price_change_percentage_7d_in_currency > 0 ? "text-green-400" : "text-red-500"}`}>{coin.price_change_percentage_7d_in_currency.toFixed(2)}%</td>
-							<td className={`py-6`}>{coin.total_volume.toLocaleString()} $</td>
-							<td className={`py-6`}>{coin.market_cap.toLocaleString()} $</td>
-							<td className={`py-6`}>
+							<td
+								onClick={() => nav(`/coin/${coin.symbol}`)}
+								className={`py-6`}>
+								{coin.current_price.toLocaleString()} $
+							</td>
+							<td
+								onClick={() => nav(`/coin/${coin.symbol}`)}
+								className={`py-6 ${coin.price_change_percentage_1h_in_currency > 0 ? "text-green-400" : "text-red-500"}`}>
+								{coin.price_change_percentage_1h_in_currency.toFixed(2)}%
+							</td>
+							<td
+								onClick={() => nav(`/coin/${coin.symbol}`)}
+								className={`py-6 ${coin.price_change_percentage_24h_in_currency > 0 ? "text-green-400" : "text-red-500"}`}>
+								{coin.price_change_percentage_24h_in_currency.toFixed(2)}%
+							</td>
+							<td
+								onClick={() => nav(`/coin/${coin.symbol}`)}
+								className={`py-6 ${coin.price_change_percentage_7d_in_currency > 0 ? "text-green-400" : "text-red-500"}`}>
+								{coin.price_change_percentage_7d_in_currency.toFixed(2)}%
+							</td>
+							<td
+								onClick={() => nav(`/coin/${coin.symbol}`)}
+								className={`py-6`}>
+								{coin.total_volume.toLocaleString()} $
+							</td>
+							<td
+								onClick={() => nav(`/coin/${coin.symbol}`)}
+								className={`py-6`}>
+								{coin.market_cap.toLocaleString()} $
+							</td>
+							<td
+								onClick={() => nav(`/coin/${coin.symbol}`)}
+								className={`py-6`}>
 								<Sparklines
 									data={coin.sparkline_in_7d.price}
 									limit={100}
