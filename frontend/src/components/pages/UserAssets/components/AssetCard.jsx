@@ -13,16 +13,17 @@ const AssetCard = ({ asset }) => {
 	return (
 		<div
 			onClick={() => nav(`/coin/${coin?.symbol}`)}
-			className="flex border justify-between shadow-md py-3 px-5 rounded-md min-w-full hover:shadow-purple-200 hover:shadow-xl transition-all cursor-pointer duration-300">
+			className="flex border justify-between shadow-md py-5 px-5 rounded-md min-w-full hover:shadow-purple-200 hover:shadow-xl transition-all cursor-pointer duration-300">
 			{/* COIN INFO */}
-			<div className="flex flex-col items-center p-5 w-fit whitespace-nowrap">
+			<div className="flex flex-col items-center p-6 w-fit whitespace-nowrap">
 				<img
 					className="aspect-square w-16"
 					src={coin?.image}></img>
-				<h1 className="font-semibold text-xl">{coin?.name}</h1>
-				<h2 className=" text-lg text-gray-400">{coin?.symbol?.toUpperCase()}</h2>
+				<div className="flex gap-2 items-center">
+					<h1 className="font-semibold text-xl">{coin?.name}</h1>
+					<h2 className=" text-lg text-gray-400">{coin?.symbol?.toUpperCase()}</h2>
+				</div>
 				<div className="flex flex-col items-center">
-					<span className="font-bold">IN WALLET</span>
 					<span className="font-semibold text-sm">
 						{inWallet?.toLocaleString()} {coin?.symbol?.toUpperCase()}s
 					</span>
