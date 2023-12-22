@@ -14,7 +14,7 @@ const BuySell = ({ coin, active }) => {
 					<span className="font-semibold">{inWallet.toFixed(6)}</span>
 					<span className="text-gray-400">{coin?.symbol?.toUpperCase()}s</span>
 				</div>
-				<span className="text-xs text-gray-500">(Worth: {(inWallet * coin?.current_price).toLocaleString()} USDs)</span>
+				<span className="text-xs text-gray-500">(Worth: {(inWallet * coin?.current_price)?.toLocaleString()} USDs)</span>
 			</div>
 			{/* inputs */}
 			<div className="flex flex-col gap-5 justify-between shadow-md p-5 rounded-lg border">
@@ -24,7 +24,7 @@ const BuySell = ({ coin, active }) => {
 						<span className="text-sm text-gray-500">USD</span>
 					</div>
 					<input
-						value={coin?.current_price.toLocaleString()}
+						value={coin?.current_price?.toLocaleString()}
 						className="px-3 py-2 text-md font-bold border-[2px] w-full rounded-md"
 						readOnly></input>
 				</div>
