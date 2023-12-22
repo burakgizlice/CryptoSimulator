@@ -24,7 +24,7 @@ const BuySell = ({ coin, active }) => {
 						<span className="text-sm text-gray-500">USD</span>
 					</div>
 					<input
-						value={coin?.current_price?.toLocaleString()}
+						placeholder={coin?.current_price?.toLocaleString()}
 						className="px-3 py-2 text-md font-bold border-[2px] w-full rounded-md"
 						readOnly></input>
 				</div>
