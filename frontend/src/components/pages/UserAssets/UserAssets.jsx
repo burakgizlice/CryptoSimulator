@@ -7,6 +7,7 @@ const UserAssets = () => {
 		<div className="flex flex-col w-[95%] mx-auto py-5">
 			<h1 className="font-bold text-3xl">Welcome to your currently owned assets!</h1>
 			<h3 className="text-lg my-3">You can keep track of what you own, click on them to visit their individual coin pages to buy and sell.</h3>
+			<span className="py-2 px-4 bg-purple-400 w-fit text-white text-xl  font-semibold rounded-lg">Worth $42.750,000</span>
 			<div className="grid md:grid-cols-2 justify-items-center gap-5 my-5">
 				{mockUserAssets.map((item, index) => (
 					<AssetCard
