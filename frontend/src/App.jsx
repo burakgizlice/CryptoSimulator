@@ -11,7 +11,7 @@ const App = () => {
 	// ========== MOCK AUTH LOGIC
 	const [user, setUser] = useState(null);
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/CryptoSimulator">
 			<Navbar user={user} />
 			<Routes>
 				<Route
